@@ -62,6 +62,9 @@
 
         </div>
         <!-- ----------------- -->
+
+       <!-- composer require barryvdh/laravel-dompdf -->
+        
         <table class="table_des" rules="all">
         <tr th_des>
             <th>Id</th>
