@@ -32,12 +32,6 @@
             join me on a virtual tour of Morocco's most 
             captivating destinations!
             </p>
-            <div class="play_icon_main">
-               <div class="play_icon">
-                  <a href="#">
-                     <img src="images/play-icon.png">
-                  </a>
-               </div>
             </div>
          </div>
       </div>
