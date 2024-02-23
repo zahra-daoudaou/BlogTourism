@@ -38,7 +38,7 @@ class tachController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('admin.create_tache');
     }
 
     /**
@@ -52,7 +52,7 @@ class tachController extends Controller
             'etat'=>'required | string'
         ]);
         $newTache=tache::create($data);
-        return redirect(route('taches.index'))->with('success','Tache est ajouter!');
+        return redirect()->back()->with('success','Task added!');
     }
 
     /**
@@ -61,7 +61,7 @@ class tachController extends Controller
     public function show($id)
     {
             /*$tache = tache::findOrFail($id);
-            return view('modifier', ['tache' => $tache]);*/
+            return view('admin.edit_tache', ['tache' => $tache]);*/
     }
 
     /**
@@ -70,7 +70,7 @@ class tachController extends Controller
     public function edit(tache $tache , $id)
     {
         $tache=tache::findOrFail($id);
-        return view('modifier',['tache'=>$tache]) ;
+        return view('admin.edit_tache',['tache'=>$tache]) ;
     }
 
     /**
@@ -95,7 +95,7 @@ class tachController extends Controller
     {
         $tache=tache::findOrFail($id);
         $tache->delete();
-        return redirect(route('taches.index'))->with('success','Tache est supprimer!') ;
+        return redirect()->back()->with('success','Tache est supprimer!') ;
     }
 }
 
