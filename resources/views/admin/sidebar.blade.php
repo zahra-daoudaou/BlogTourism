@@ -7,6 +7,11 @@
                     <i class="icon-home"></i>Home </a>
                 </li>
 
+             <li>
+                  <a href="{{url('add_tache')}}"> 
+                  <i class="icon-grid"></i>Add Tasck</a>
+                </li>
+
                 <li>
                   <a href="{{url('post_page')}}"> 
                   <i class="icon-grid"></i>Add Post</a>
