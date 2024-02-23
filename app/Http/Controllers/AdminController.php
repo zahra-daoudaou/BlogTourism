@@ -58,9 +58,15 @@ class AdminController extends Controller
 
         return view('admin.show_post',compact('post'));
     }
+    public function aboutpage(){
+        return view('home.aboutpage');
+    }
+     public function gallary(){
+        return view('home.gallary');
+    }
      
     
-
+}
 
 
 
