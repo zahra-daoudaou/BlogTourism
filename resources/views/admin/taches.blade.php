@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <base href="/public">
     @include('admin.css')
 
     <style>
