@@ -16,8 +16,6 @@
 
         <h1 class="post_title" >Edit my task</h1>
 
-          <!--<input type="search" name="search" id="search" value="{{request('search')}}">
-
     <ul>
         @forelse($taches as $tache)
         <li>{{$tache->titre}}</li>
