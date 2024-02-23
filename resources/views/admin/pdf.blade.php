@@ -24,10 +24,6 @@
         }
         .th_des{
             background-color:#DDD2C0;
-        }
-        .img_drg{
-            height:100px;
-        }
     </style>
 
   </head>
