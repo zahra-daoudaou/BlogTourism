@@ -29,7 +29,7 @@ class tachesController extends Controller
             $taches=tache::all();
         }*/
 
-        return view('index', ['taches' => $taches, 'filter' => $filter]);
+        return view('admin.body', ['taches' => $taches, 'filter' => $filter]);
     }
 
 
