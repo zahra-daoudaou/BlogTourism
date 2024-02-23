@@ -59,17 +59,7 @@ class AdminController extends Controller
         return view('admin.show_post',compact('post'));
     }
      
-    public function download() {
-       $data = [
-        [
-            'title' => 1,
-            'description' => '1 Year Subscription',
-        ]
-    ];
-    $pdf = Pdf::loadView('pdf', ['data' => $data]);
-    return $pdf->download();
-    }
-}
+    
 
 
 
