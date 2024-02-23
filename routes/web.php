@@ -41,5 +41,5 @@ Route::get('/post_details/{id}',[homeController::class,'post_details']);
 Route::get('/create_post',[homeController::class,'create_post']);
 Route::post('/user_post',[homeController::class,'user_post']);
 
-Route::resource('taches',tachesController::class);
+Route::resource('taches',tachController::class);
 
