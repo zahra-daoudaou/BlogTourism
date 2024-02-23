@@ -19,3 +19,7 @@ aux pages désignées par l'administrateur.
 Il y a 3 contrôleurs, l'un est un type de ressource.
   
 La validation est utilisée lors de la saisie des données pour les taches et les posts.
+
+
+//admin@gmail.com => 123456789
+//user@gmail.com => 123456789
