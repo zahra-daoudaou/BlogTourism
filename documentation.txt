@@ -1,0 +1,21 @@
+le projet est un blog personnel qui se concentre sur le tourisme au Maroc.
+  
+sous le nom de Bladi.
+  
+Il y a un utilisateur, un administrateur et un visiteur.
+  
+L'utilisateur peut publier, supprimer et modifier ses posts.
+  
+L'administrateur peut poster, supprimer et éditer ses posts. 
+  
+L'administrateur a aussi sa propre page où il gère tout le site web.
+  
+L'administrateur peut aussi créer, supprimer et éditer des tâches et les télécharger 
+au format pdf, ainsi que rechercher des posts par leur titre.
+  
+L'administrateur dispose de son propre middleware pour empêcher les utilisateurs normaux d'accéder 
+aux pages désignées par l'administrateur.
+  
+Il y a 3 contrôleurs, l'un est un type de ressource.
+  
+La validation est utilisée lors de la saisie des données pour les taches et les posts.
