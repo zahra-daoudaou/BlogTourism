@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\tache;
 
-class tachesController extends Controller
+class tachController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -85,7 +85,7 @@ class tachesController extends Controller
             'etat'=>'required | string'
         ]);
         $tache->update($data);
-        return redirect(route('taches.index'))->with('success','Tache est modifier!');
+        return redirect()->back()->with('success','Tache est modifier!');
     }
 
     /**
