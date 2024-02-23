@@ -8,19 +8,13 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home</a>
+                           <a class="nav-link" href="{{url('home.homepage')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
+                           <a class="nav-link" href="{{url('home.aboutpage')}}">About</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="services.html">Gallary</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
+                           <a class="nav-link " href="{{url('home.gallary')}}">Blog</a>
                         </li>
                      </ul>
                   </div>
