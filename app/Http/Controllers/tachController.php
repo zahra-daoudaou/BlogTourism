@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\tache;
+use App\Models\Tache;
 
 class tachController extends Controller
 {
@@ -16,15 +16,15 @@ class tachController extends Controller
         $filter = $request->query('filter');
 
         if ($filter === 'terminé') {
-            $taches = tache::where('etat', 'termine')->paginate(10);
+            $taches = Tache::where('etat', 'termine')->paginate(10);
         } elseif ($filter === 'non terminé') {
-            $taches = tache::where('etat', 'non termine')->paginate(10);
+            $taches = Tache::where('etat', 'non termine')->paginate(10);
         } else {
-            $taches = tache::paginate(10);
+            $taches = Tache::paginate(10);
         }
 
         /*if(request ('search')){
-            $taches=tache::where('titre','like','%'.request('search').'%')->get();
+            $taches=Tache::where('titre','like','%'.request('search').'%')->get();
         }else{
             $taches=tache::all();
         }*/
@@ -60,7 +60,7 @@ class tachController extends Controller
      */
     public function show($id)
     {
-            /*$tache = tache::findOrFail($id);
+            /*$tache = Tache::findOrFail($id);
             return view('admin.edit_tache', ['tache' => $tache]);*/
     }
 
@@ -69,7 +69,7 @@ class tachController extends Controller
      */
     public function edit(tache $tache , $id)
     {
-        $tache=tache::findOrFail($id);
+        $tache=Tache::findOrFail($id);
         return view('admin.edit_tache',['tache'=>$tache]) ;
     }
 
@@ -78,7 +78,7 @@ class tachController extends Controller
      */
     public function update(tache $tache, Request $request, $id)
     {
-        $tache=tache::findOrfail($id);
+        $tache=Tache::findOrfail($id);
         $data=$request->validate([
             'titre'=>'required | string',
             'description'=>'required | string',
@@ -97,5 +97,20 @@ class tachController extends Controller
         $tache->delete();
         return redirect()->back()->with('success','Tache est supprimer!') ;
     }
+
+    public function download() {
+       $posts = Tache::all();
+    
+    $data = [];
+    foreach ($taches as $tache) {
+        $data[] = [
+            'title' => $post->title,
+            'description' => $tache->description,
+        ];
+    }
+
+    $pdf = Pdf::loadView('pdf', ['data' => $data]);
+    return $pdf->download('taches.pdf');
+}
 }
 
