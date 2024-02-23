@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Categorie;
-
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -57,6 +57,17 @@ class AdminController extends Controller
         $post = Post::all();
 
         return view('admin.show_post',compact('post'));
+    }
+     
+    public function download() {
+       $data = [
+        [
+            'title' => 1,
+            'description' => '1 Year Subscription',
+        ]
+    ];
+    $pdf = Pdf::loadView('pdf', ['data' => $data]);
+    return $pdf->download();
     }
 }
 
